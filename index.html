@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promos da Veh</title>
+<meta name="description" content="Entre no grupo gratuito Promoções e cupons de desconto da Veh no WhatsApp: achadinhos de moda e beleza coreana, cupons e ofertas todos os dias.">
+<meta property="og:title" content="Promos da Veh — Promoções e cupons de desconto">
+<meta property="og:description" content="Achadinhos de moda e beleza coreana com cupons exclusivos. Entre no grupo gratuito do WhatsApp.">
+<meta property="og:image" content="img/logo.jpeg">
+<meta name="theme-color" content="#e8177d">
+<link rel="icon" href="img/logo.jpeg">
+<link rel="preload" as="image" href="img/veh.jpeg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf5f1;
+    --blush:#fde4ec;
+    --pink:#e8177d;
+    --pink-deep:#c20f66;
+    --plum:#4a0d33;
+    --plum-soft:#6e3a58;
+    --gold:#f6c544;
+    --lilac:#ead9f5;
+    --wa:#25d366;
+    --shadow:0 18px 40px -18px rgba(74,13,51,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--plum);background:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+  b,strong,h3{font-weight:600}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Botões ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;border-radius:999px;padding:16px 30px;font-size:16px;transition:transform .2s,background-color .2s}
+  .btn svg{width:22px;height:22px;flex:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--pink);color:#fff;box-shadow:0 14px 30px -12px rgba(232,23,125,.7)}
+  .btn-primary:hover{background:var(--pink-deep)}
+  .btn-plum{background:var(--plum);color:#fff;box-shadow:0 14px 30px -12px rgba(74,13,51,.6)}
+  .btn-white{background:#fff;color:var(--pink);box-shadow:var(--shadow)}
+  .btn-white svg{color:var(--wa)}
+  .pulse{animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,23,125,.55)}70%,100%{box-shadow:0 0 0 16px rgba(232,23,125,0)}}
+
+  /* ---------- Topo ---------- */
+  .hero{position:relative;background:var(--blush);overflow:hidden}
+  .hero-panel{position:absolute;top:0;right:0;width:44%;height:100%;border-bottom-left-radius:220px;overflow:hidden;background:#d81b7c}
+  .hero-panel img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+  .watermark{position:absolute;right:6px;top:110px;writing-mode:vertical-rl;font-family:'Bebas Neue',sans-serif;font-size:110px;line-height:1;letter-spacing:6px;color:rgba(255,255,255,.14);white-space:nowrap;pointer-events:none}
+
+  header{position:relative;z-index:5}
+  .nav{position:relative;display:flex;align-items:center;height:88px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{width:46px;height:46px;border-radius:50%;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--pink)}
+  .brand span{font-family:'Dancing Script',cursive;font-size:30px;line-height:1}
+  .brand span b{color:var(--pink);font-weight:700}
+  .menu{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:30px;font-size:14px;font-weight:500;white-space:nowrap;background:rgba(255,255,255,.92);padding:10px 28px;border-radius:999px;box-shadow:0 10px 26px -16px rgba(74,13,51,.45)}
+  .menu a{opacity:.8;transition:opacity .2s,color .2s}
+  .menu a:hover{opacity:1;color:var(--pink)}
+
+  .hero-content{position:relative;z-index:2;display:flex;align-items:center;min-height:600px}
+  .hero-text{width:56%;padding:30px 40px 90px 0}
+  h1{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(52px,7vw,92px);line-height:.95;letter-spacing:1px}
+  .hl{color:var(--pink)}
+  .under{position:relative;display:inline-block}
+  .under::after{content:"";position:absolute;left:8%;right:8%;bottom:-14px;height:14px;border-bottom:4px solid var(--pink);border-radius:0 0 50% 50%}
+  .lead{margin:34px 0;max-width:470px;color:var(--plum-soft)}
+  .trust{display:flex;align-items:center;gap:6px;margin-top:38px;font-size:13px;font-weight:500;color:var(--plum-soft)}
+  .trust::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--pink)}
+
+  /* ---------- Categorias ---------- */
+  .cats{background:#fff}
+  .cats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:46px 24px}
+  .cat svg{width:44px;height:44px;color:var(--pink);margin-bottom:14px}
+  .cat h3{font-size:16px;margin-bottom:4px}
+  .cat p{font-size:13.5px;color:var(--plum-soft);line-height:1.55}
+
+  /* ---------- Seções ---------- */
+  section{padding:100px 0}
+  .kicker{font-family:'Dancing Script',cursive;color:var(--pink);font-size:28px;line-height:1}
+  h2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(40px,5vw,60px);line-height:1;letter-spacing:.5px;margin:8px 0 18px}
+  .sub{color:var(--plum-soft);max-width:560px}
+  .center{text-align:center}
+  .center .sub{margin:0 auto}
+
+  /* Como funciona */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px;text-align:left}
+  .step{background:#fff;border-radius:28px;padding:34px 30px;position:relative;box-shadow:0 20px 40px -30px rgba(74,13,51,.4);transition:transform .25s}
+  .step:hover{transform:translateY(-6px)}
+  .step .n{font-family:'Bebas Neue',sans-serif;font-size:64px;line-height:1;color:var(--blush);-webkit-text-stroke:2px var(--pink);position:absolute;top:18px;right:26px}
+  .step .ic{width:56px;height:56px;border-radius:18px;background:var(--blush);display:grid;place-items:center;color:var(--pink);margin-bottom:22px}
+  .step .ic svg{width:28px;height:28px}
+  .step h3{font-size:18px;margin-bottom:8px}
+  .step p{font-size:14.5px;color:var(--plum-soft)}
+
+  /* Por que entrar */
+  .why{background:#fff;position:relative;overflow:hidden}
+  .why::before,.why::after{content:"";position:absolute;border-radius:50%;background:var(--lilac)}
+  .why::before{width:420px;height:420px;right:-160px;top:-140px}
+  .why::after{width:300px;height:300px;left:-140px;bottom:-100px}
+  .why .grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .why-img{position:relative}
+  .why-img img{border-radius:36px;box-shadow:0 40px 60px -40px rgba(74,13,51,.6);transform:rotate(-2deg)}
+  .sticker{position:absolute;top:-22px;right:-14px;width:110px;height:110px;border-radius:50%;background:var(--gold);display:grid;place-items:center;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1;transform:rotate(12deg);box-shadow:var(--shadow)}
+  .benefits{list-style:none;margin:30px 0 38px;display:grid;gap:16px}
+  .benefits li{display:flex;gap:14px;align-items:flex-start}
+  .benefits li::before{content:"";flex:none;width:28px;height:28px;border-radius:50%;margin-top:1px;background:var(--pink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/15px no-repeat}
+  .benefits strong{display:block;font-size:15.5px}
+  .benefits span{font-size:14px;color:var(--plum-soft)}
+
+  /* Dúvidas */
+  .faq{max-width:780px;margin:50px auto 0;display:grid;gap:14px}
+  details{background:#fff;border-radius:20px;padding:20px 26px;box-shadow:0 14px 30px -26px rgba(74,13,51,.5)}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:26px;color:var(--pink);font-weight:400;line-height:1;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin-top:12px;color:var(--plum-soft);font-size:14.5px}
+
+  /* Chamada final */
+  .final{padding:0 0 100px}
+  .final-box{background:linear-gradient(120deg,var(--pink),#b4105f);border-radius:40px;color:#fff;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:50px 56px;position:relative;overflow:hidden}
+  .final-box::before{content:"VEH";position:absolute;right:-20px;bottom:-60px;font-family:'Bebas Neue',sans-serif;font-size:260px;line-height:1;color:rgba(255,255,255,.08);pointer-events:none}
+  .final-box img{width:130px;height:130px;border-radius:50%;box-shadow:0 0 0 5px rgba(255,255,255,.35)}
+  .final-box h2{margin:0 0 6px}
+  .final-box p{opacity:.9}
+  .final-box .btn{position:relative}
+
+  footer{background:var(--plum);color:#f3dbe7;padding:34px 0;font-size:13px}
+  footer .row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer .brand span{color:#fff}
+  footer .brand img{width:38px;height:38px}
+  .credit{font-weight:600;color:#fff;text-underline-offset:3px}
+  .credit:hover,.credit:active,.credit:focus-visible{text-decoration:underline}
+
+  /* ---------- Pop-up "fulano entrou" ---------- */
+  .toast{position:fixed;right:22px;bottom:22px;z-index:50;width:340px;background:#fff;border-radius:20px;padding:14px 40px 14px 14px;display:flex;gap:13px;align-items:center;box-shadow:0 22px 50px -18px rgba(74,13,51,.55);border:1px solid #f6d5e3;transform:translateY(140%);opacity:0;visibility:hidden;transition:transform .5s cubic-bezier(.2,.9,.3,1.2),opacity .4s,visibility .5s}
+  .toast.show{transform:none;opacity:1;visibility:visible}
+  .av{position:relative;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:600;font-size:17px;flex:none}
+  .av i{position:absolute;right:-3px;bottom:-3px;width:21px;height:21px;border-radius:50%;background:var(--wa);border:2px solid #fff;display:grid;place-items:center;color:#fff}
+  .av svg{width:11px;height:11px}
+  .msg{font-size:13.5px;line-height:1.4}
+  .msg em{font-style:normal;color:var(--pink);font-weight:600}
+  .time{display:block;font-size:11.5px;color:#9c7c8e;margin-top:3px}
+  .x{position:absolute;top:6px;right:8px;background:none;border:0;font:inherit;font-size:20px;line-height:1;color:#b896a8;cursor:pointer;padding:6px}
+
+  /* Animação de entrada (só com JS ativo) */
+  .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+  .js .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Computador: botões principais mais largos ---------- */
+  @media (min-width:981px){
+    .hero-text .btn-primary,.why .btn-plum{min-width:380px;padding:18px 40px;font-size:17px}
+  }
+
+  /* ---------- Tablet e celular ---------- */
+  @media (max-width:980px){
+    .menu,.watermark{display:none}
+    .hero{display:flex;flex-direction:column;padding-bottom:40px}
+    .hero header{order:1;width:100%}
+    .hero-content{display:contents}
+    .hero-text{order:2;width:auto;max-width:720px;padding:10px 24px 40px}
+    .hero-panel{order:3;position:relative;width:auto;height:460px;margin:0 24px;border-radius:32px 32px 32px 140px}
+    .cats .grid{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:1fr}
+    .why .grid{grid-template-columns:1fr;gap:50px}
+    .why-img{max-width:440px;margin:0 auto}
+    .final-box{grid-template-columns:1fr;text-align:center;justify-items:center;padding:44px 28px}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 16px}
+    .nav{height:74px}
+    .brand span{font-size:26px}
+    section{padding:70px 0}
+    .hero-text{padding:6px 16px 34px}
+    .hero-text .btn{width:100%}
+    .hero-panel{height:380px;margin:0 16px;border-radius:28px 28px 28px 110px}
+    .cats .grid{gap:24px 18px;padding:40px 16px}
+    .final{padding-bottom:70px}
+    .final-box img{width:100px;height:100px}
+    .sticker{width:92px;height:92px;font-size:21px;right:-4px}
+    .toast{left:16px;right:16px;width:auto;bottom:16px}
+  }
+  @media (hover:none){.btn:hover,.step:hover{transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation:none!important;transition:none!important}
+    .js .reveal{opacity:1;transform:none}
+  }
+</style>
+<script>document.documentElement.className='js'</script>
+</head>
+<body>
+
+<!-- Ícone do WhatsApp (reutilizado em todo o site) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C9.06 3 3.4 8.65 3.4 15.62c0 2.23.59 4.4 1.7 6.32L3.3 28.5l6.73-1.76a12.6 12.6 0 0 0 6 1.53h.01c6.97 0 12.63-5.66 12.63-12.63 0-3.37-1.31-6.55-3.7-8.93A12.53 12.53 0 0 0 16.04 3Zm0 23.13h-.01a10.5 10.5 0 0 1-5.35-1.47l-.38-.23-3.99 1.05 1.06-3.89-.25-.4a10.45 10.45 0 0 1-1.6-5.57c0-5.8 4.72-10.51 10.53-10.51 2.81 0 5.45 1.1 7.44 3.08a10.45 10.45 0 0 1 3.08 7.44c0 5.8-4.72 10.5-10.53 10.5Zm5.77-7.87c-.32-.16-1.87-.92-2.16-1.03-.29-.1-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.33-.49-2.54-1.57-.94-.84-1.57-1.87-1.75-2.18-.18-.32-.02-.49.14-.65.14-.14.32-.37.47-.55.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.52 1.8.66.75.24 1.44.21 1.98.13.6-.09 1.87-.76 2.13-1.5.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37Z"/></symbol>
+</svg>
+
+<!-- ================= TOPO ================= -->
+<div class="hero">
+  <div class="hero-panel" aria-hidden="true">
+    <img src="img/veh.jpeg" alt="" width="1000" height="1000" fetchpriority="high">
+    <div class="watermark">PROMOS DA VEH</div>
+  </div>
+
+  <header class="wrap">
+    <nav class="nav">
+      <a href="#" class="brand"><img src="img/logo.jpeg" alt="Logo Promos da Veh" width="46" height="46"><span>Promos da <b>Veh</b></span></a>
+      <div class="menu">
+        <a href="#categorias">Achadinhos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#duvidas">Dúvidas</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="wrap hero-content">
+    <div class="hero-text">
+      <h1><span class="hl">Moda e beleza</span><br>coreana com <span class="under">desconto</span>.</h1>
+      <p class="lead">Skincare, K-beauty, roupas e acessórios com as melhores ofertas e cupons, direto no seu WhatsApp. Entre e aproveite! 💗</p>
+      <a href="https://chat.whatsapp.com/DDvEWCOSRe8HkdxkBNKqer" target="_blank" rel="noopener" class="btn btn-primary pulse"><svg aria-hidden="true"><use href="#wa"/></svg>Quero entrar no grupo</a>
+      <p class="trust"><span><b>+1798 pessoas</b> já economizaram com as ofertas do grupo</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CATEGORIAS ================= -->
+<div class="cats" id="categorias">
+  <div class="wrap grid">
+    <div class="cat reveal">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="14" width="16" height="28" rx="4"/><path d="M19 14V9h10v5M21 5h6v4h-6zM16 24h16"/></svg>
+      <h3>Skincare coreano</h3>
+      <p>Séruns, protetores, essências e máscaras das marcas queridinhas da K-beauty.</p>
+    </div>
+    <div class="cat reveal">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="17" y="24" width="14" height="18" rx="2"/><path d="M19 24V14l6-7 4 3v14M17 32h14"/></svg>
+      <h3>Maquiagem</h3>
+      <p>Tints, cushions, batons e paletas com preço de achadinho.</p>
+    </div>
+    <div class="cat reveal">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-10 6 4 9 4-2v23h16V19l4 2 4-9-10-6c0 3-3 6-6 6s-6-3-6-6Z"/></svg>
+      <h3>Moda &amp; acessórios</h3>
+      <p>Looks no estilo coreano, bolsas, bijus e tudo que está em alta.</p>
+    </div>
+    <div class="cat reveal">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v5a5 5 0 0 0 0 10v5a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4v-5a5 5 0 0 0 0-10Z"/><path d="M19 30l10-12M19.5 19.5h.01M28.5 28.5h.01"/></svg>
+      <h3>Cupons exclusivos</h3>
+      <p>Códigos de desconto e frete grátis da Shopee e outras lojas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section id="como-funciona">
+  <div class="wrap center">
+    <span class="kicker">simples assim</span>
+    <h2>Como <span class="hl">funciona</span></h2>
+    <p class="sub">Em menos de um minuto você já está recebendo as melhores ofertas.</p>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V6a3 3 0 0 1 6 0v5"/><path d="M6 11h12l-1 10H7z"/></svg></div>
+        <h3>Toque no botão</h3>
+        <p>Clique em “Quero entrar no grupo” e o WhatsApp abre na hora.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <div class="ic"><svg aria-hidden="true"><use href="#wa"/></svg></div>
+        <h3>Entre no grupo</h3>
+        <p>Toque em “Entrar no grupo” e pronto: você faz parte do <b>Promoções e cupons de desconto</b>.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8Z"/></svg></div>
+        <h3>Aproveite as ofertas</h3>
+        <p>Receba os achadinhos, use os cupons e economize sem precisar procurar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VANTAGENS ================= -->
+<section class="why" id="vantagens">
+  <div class="wrap grid">
+    <div class="why-img reveal">
+      <img src="img/veh-produtos.jpeg" alt="Veh mostrando achadinhos de moda e beleza" width="800" height="1000" loading="lazy" decoding="async">
+      <div class="sticker">GRÁTIS<br>PRA<br>SEMPRE</div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">por que entrar?</span>
+      <h2>Achadinhos que <span class="hl">valem a pena</span></h2>
+      <p class="sub">A Veh testa, compara e só manda o que realmente compensa. Você economiza tempo e dinheiro.</p>
+      <ul class="benefits">
+        <li><div><strong>Ofertas selecionadas a dedo</strong><span>Só promoção de verdade, nada de preço maquiado.</span></div></li>
+        <li><div><strong>Cupons antes de todo mundo</strong><span>Os códigos chegam primeiro no grupo — corre que acaba!</span></div></li>
+        <li><div><strong>Beleza coreana acessível</strong><span>K-beauty original com o melhor preço que encontrarmos.</span></div></li>
+        <li><div><strong>Sem spam e sem custo</strong><span>Grupo só de avisos, organizado e 100% gratuito.</span></div></li>
+      </ul>
+      <a href="https://chat.whatsapp.com/DDvEWCOSRe8HkdxkBNKqer" target="_blank" rel="noopener" class="btn btn-plum"><svg aria-hidden="true"><use href="#wa"/></svg>Quero entrar no grupo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DÚVIDAS ================= -->
+<section id="duvidas">
+  <div class="wrap center">
+    <span class="kicker">ficou alguma dúvida?</span>
+    <h2>Perguntas <span class="hl">frequentes</span></h2>
+  </div>
+  <div class="wrap faq">
+    <details><summary>O grupo é pago?</summary><p>Não! O grupo Promoções e cupons de desconto é totalmente gratuito. Você só paga pelo que decidir comprar, direto na loja.</p></details>
+    <details><summary>Vou receber muitas mensagens?</summary><p>O grupo é só para avisos de ofertas e cupons. Se preferir, é só silenciar as notificações e conferir quando quiser.</p></details>
+    <details><summary>Onde são as compras?</summary><p>Os links levam para lojas conhecidas como a Shopee e outras parceiras. A compra é feita direto no site ou app da loja.</p></details>
+    <details><summary>Posso sair quando quiser?</summary><p>Claro! É só sair do grupo pelo próprio WhatsApp a qualquer momento, sem compromisso.</p></details>
+  </div>
+</section>
+
+<!-- ================= CHAMADA FINAL ================= -->
+<div class="final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <img src="img/logo.jpeg" alt="Promos da Veh" width="130" height="130" loading="lazy" decoding="async">
+      <div>
+        <h2>Bora economizar comigo?</h2>
+        <p>Entre agora no grupo <b>Promoções e cupons de desconto</b> e não perca nenhum achadinho.</p>
+      </div>
+      <a href="https://chat.whatsapp.com/DDvEWCOSRe8HkdxkBNKqer" target="_blank" rel="noopener" class="btn btn-white"><svg aria-hidden="true"><use href="#wa"/></svg>Entrar no grupo</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap row">
+    <a href="#" class="brand"><img src="img/logo.jpeg" alt="" width="38" height="38" loading="lazy" decoding="async"><span>Promos da <b>Veh</b></span></a>
+    <p>© <span id="ano"></span> Promos da Veh · Site desenvolvido por <a href="https://wa.me/5514998382916?text=Ol%C3%A1!%20Tenho%20interesse%20em%20conhecer%20melhor%20os%20servi%C3%A7os%20de%20cria%C3%A7%C3%A3o%20de%20sites.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener" class="credit">Kauã Ferreira</a></p>
+  </div>
+</footer>
+
+<!-- Pop-up de "fulano entrou" -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <div class="av" id="toastAv"><span id="toastIni"></span><i><svg aria-hidden="true"><use href="#wa"/></svg></i></div>
+  <div class="msg"><b id="toastName"></b> <span id="toastCity"></span><br><em>entrou no grupo</em> 💗<span class="time" id="toastTime"></span></div>
+  <button class="x" id="toastClose" type="button" aria-label="Fechar">×</button>
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  $('ano').textContent = new Date().getFullYear();
+
+  // Animação ao rolar
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  // ===== Pop-ups "fulano entrou no grupo" =====
+  // Para editar: altere os nomes/cidades abaixo.
+  const nomes = ['Ana Clara','Juliana','Fernanda','Camila','Beatriz','Larissa','Mariana','Gabriela','Letícia','Amanda','Bruna','Isabela','Carolina','Patrícia','Vitória','Rafaela','Aline','Natália','Jéssica','Yasmin','Thaís','Débora','Luana','Priscila','Raquel','Sabrina','Lorena','Bianca','Giovanna','Manuela'];
+  const cidades = ['São Paulo - SP','Rio de Janeiro - RJ','Belo Horizonte - MG','Salvador - BA','Fortaleza - CE','Recife - PE','Curitiba - PR','Porto Alegre - RS','Goiânia - GO','Manaus - AM','Belém - PA','Brasília - DF','Campinas - SP','Florianópolis - SC','Natal - RN','João Pessoa - PB','Vitória - ES','São Luís - MA','Maceió - AL','Cuiabá - MT','Santos - SP','Londrina - PR','Uberlândia - MG','Niterói - RJ'];
+  const tempos = ['agora mesmo','há poucos segundos','há 1 minuto','há 2 minutos'];
+  const cores = ['#e8177d','#c20f66','#9b3fc9','#f08a3e','#4a0d33','#d6467f','#7d5bd6'];
+
+  const toast = $('toast');
+  const rnd = a => a[Math.floor(Math.random() * a.length)];
+  let ultimo = '', timer;
+
+  function mostrar(){
+    // não mostra enquanto a aba estiver em segundo plano
+    if (document.hidden) { timer = setTimeout(mostrar, 3000); return; }
+    let nome; do { nome = rnd(nomes); } while (nome === ultimo); ultimo = nome;
+    $('toastName').textContent = nome;
+    $('toastCity').textContent = 'de ' + rnd(cidades);
+    $('toastTime').textContent = rnd(tempos);
+    $('toastIni').textContent = nome.split(' ').map(p => p[0]).join('').slice(0,2);
+    $('toastAv').style.background = rnd(cores);
+    toast.classList.add('show');
+    timer = setTimeout(() => {
+      toast.classList.remove('show');
+      timer = setTimeout(mostrar, 6000 + Math.random() * 6000); // intervalo entre pop-ups
+    }, 5000); // tempo que o pop-up fica na tela
+  }
+  $('toastClose').addEventListener('click', () => {
+    toast.classList.remove('show');
+    clearTimeout(timer);
+    timer = setTimeout(mostrar, 25000); // volta a aparecer depois de um tempo maior
+  });
+  timer = setTimeout(mostrar, 3500);
+</script>
+</body>
+</html>
