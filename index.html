@@ -7,13 +7,12 @@
 <meta name="description" content="Entre no grupo gratuito Promoções e cupons de desconto da Veh no WhatsApp: achadinhos de moda e beleza coreana, cupons e ofertas todos os dias.">
 <meta property="og:title" content="Promos da Veh — Promoções e cupons de desconto">
 <meta property="og:description" content="Achadinhos de moda e beleza coreana com cupons exclusivos. Entre no grupo gratuito do WhatsApp.">
-<meta property="og:image" content="img/logo.jpeg">
+<meta property="og:image" content="https://projeto-veronica-belezamoda-coreana.vercel.app/img/logo-og.jpg">
 <meta name="theme-color" content="#e8177d">
-<link rel="icon" href="img/logo.jpeg">
-<link rel="preload" as="image" href="img/veh.jpeg" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo-96.webp" type="image/webp">
+<link rel="preload" as="image" imagesrcset="img/veh-600.webp 600w, img/veh-1000.webp 1000w" imagesizes="(max-width:980px) 100vw, 44vw" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/bebas-neue-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/poppins-400.woff2" crossorigin>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -35,6 +34,12 @@ src="https://www.facebook.com/tr?id=1643902570529765&ev=PageView&noscript=1"
 
 
 <style>
+  /* Fontes hospedadas no próprio site (sem depender do Google Fonts) */
+  @font-face{font-family:'Bebas Neue';font-weight:400;font-display:swap;src:url(fonts/bebas-neue-400.woff2) format('woff2')}
+  @font-face{font-family:'Dancing Script';font-weight:700;font-display:swap;src:url(fonts/dancing-script-700.woff2) format('woff2')}
+  @font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url(fonts/poppins-400.woff2) format('woff2')}
+  @font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url(fonts/poppins-500.woff2) format('woff2')}
+  @font-face{font-family:'Poppins';font-weight:600;font-display:swap;src:url(fonts/poppins-600.woff2) format('woff2')}
   :root{
     --cream:#fdf5f1;
     --blush:#fde4ec;
@@ -64,8 +69,10 @@ src="https://www.facebook.com/tr?id=1643902570529765&ev=PageView&noscript=1"
   .btn-plum{background:var(--plum);color:#fff;box-shadow:0 14px 30px -12px rgba(74,13,51,.6)}
   .btn-white{background:#fff;color:var(--pink);box-shadow:var(--shadow)}
   .btn-white svg{color:var(--wa)}
-  .pulse{animation:pulse 2.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,23,125,.55)}70%,100%{box-shadow:0 0 0 16px rgba(232,23,125,0)}}
+  /* pulso animado só com transform/opacity (roda na GPU, não trava a rolagem) */
+  .pulse{position:relative;isolation:isolate}
+  .pulse::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--pink);animation:pulse 2.4s infinite;pointer-events:none}
+  @keyframes pulse{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.08,1.5);opacity:0}}
 
   /* ---------- Topo ---------- */
   .hero{position:relative;background:var(--blush);overflow:hidden}
@@ -225,13 +232,13 @@ src="https://www.facebook.com/tr?id=1643902570529765&ev=PageView&noscript=1"
 <!-- ================= TOPO ================= -->
 <div class="hero">
   <div class="hero-panel" aria-hidden="true">
-    <img src="img/veh.jpeg" alt="" width="1000" height="1000" fetchpriority="high">
+    <img src="img/veh-1000.webp" srcset="img/veh-600.webp 600w, img/veh-1000.webp 1000w" sizes="(max-width:980px) 100vw, 44vw" alt="" width="1000" height="1000" fetchpriority="high" decoding="async">
     <div class="watermark">PROMOS DA VEH</div>
   </div>
 
   <header class="wrap">
     <nav class="nav">
-      <a href="#" class="brand"><img src="img/logo.jpeg" alt="Logo Promos da Veh" width="46" height="46"><span>Promos da <b>Veh</b></span></a>
+      <a href="#" class="brand"><img src="img/logo-96.webp" alt="Logo Promos da Veh" width="46" height="46"><span>Promos da <b>Veh</b></span></a>
       <div class="menu">
         <a href="#categorias">Achadinhos</a>
         <a href="#como-funciona">Como funciona</a>
@@ -310,7 +317,7 @@ src="https://www.facebook.com/tr?id=1643902570529765&ev=PageView&noscript=1"
 <section class="why" id="vantagens">
   <div class="wrap grid">
     <div class="why-img reveal">
-      <img src="img/veh-produtos.jpeg" alt="Veh mostrando achadinhos de moda e beleza" width="800" height="1000" loading="lazy" decoding="async">
+      <img src="img/veh-produtos-800.webp" srcset="img/veh-produtos-480.webp 480w, img/veh-produtos-800.webp 800w" sizes="(max-width:980px) min(440px, 100vw), 540px" alt="Veh mostrando achadinhos de moda e beleza" width="800" height="1000" loading="lazy" decoding="async">
       <div class="sticker">GRÁTIS<br>PRA<br>SEMPRE</div>
     </div>
     <div class="reveal">
@@ -346,7 +353,7 @@ src="https://www.facebook.com/tr?id=1643902570529765&ev=PageView&noscript=1"
 <div class="final">
   <div class="wrap">
     <div class="final-box reveal">
-      <img src="img/logo.jpeg" alt="Promos da Veh" width="130" height="130" loading="lazy" decoding="async">
+      <img src="img/logo-260.webp" alt="Promos da Veh" width="130" height="130" loading="lazy" decoding="async">
       <div>
         <h2>Bora economizar comigo?</h2>
         <p>Entre agora no grupo <b>Promoções e cupons de desconto</b> e não perca nenhum achadinho.</p>
@@ -358,7 +365,7 @@ src="https://www.facebook.com/tr?id=1643902570529765&ev=PageView&noscript=1"
 
 <footer>
   <div class="wrap row">
-    <a href="#" class="brand"><img src="img/logo.jpeg" alt="" width="38" height="38" loading="lazy" decoding="async"><span>Promos da <b>Veh</b></span></a>
+    <a href="#" class="brand"><img src="img/logo-96.webp" alt="" width="38" height="38" loading="lazy" decoding="async"><span>Promos da <b>Veh</b></span></a>
     <p>© <span id="ano"></span> Promos da Veh · Site desenvolvido por <a href="https://wa.me/5514998382916?text=Ol%C3%A1!%20Tenho%20interesse%20em%20conhecer%20melhor%20os%20servi%C3%A7os%20de%20cria%C3%A7%C3%A3o%20de%20sites.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener" class="credit">Kauã Ferreira</a></p>
   </div>
 </footer>
